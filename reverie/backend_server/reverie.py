@@ -153,7 +153,6 @@ class ReverieServer:
     with open(f"{fs_temp_storage}/curr_step.json", "w") as outfile: 
       outfile.write(json.dumps(curr_step, indent=2))
 
-
   def save(self): 
     """
     Save all Reverie progress -- this includes Reverie's global state as well
@@ -398,6 +397,8 @@ class ReverieServer:
           #  "persona": {"Klaus Mueller": {"movement": [38, 12]}}, 
           #  "meta": {curr_time: <datetime>}}
           curr_move_file = f"{sim_folder}/movement/{self.step}.json"
+          if not os.path.exists(f"{sim_folder}/movement/"):
+            os.makedirs(f"{sim_folder}/movement/")
           with open(curr_move_file, "w") as outfile: 
             outfile.write(json.dumps(movements, indent=2))
 

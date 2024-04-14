@@ -491,6 +491,7 @@ def _long_term_planning(persona, new_day):
   # Based on the daily_req, we create an hourly schedule for the persona, 
   # which is a list of todo items with a time duration (in minutes) that 
   # add up to 24 hours.
+  # breakpoint()
   persona.scratch.f_daily_schedule = generate_hourly_schedule(persona, 
                                                               wake_up_hour)
   persona.scratch.f_daily_schedule_hourly_org = (persona.scratch
@@ -952,6 +953,7 @@ def plan(persona, maze, personas, new_day, retrieved):
   """ 
   # PART 1: Generate the hourly schedule. 
   if new_day: 
+    # breakpoint()
     _long_term_planning(persona, new_day)
 
   # PART 2: If the current action has expired, we want to create a new plan.

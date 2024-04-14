@@ -174,7 +174,7 @@ class Maze:
     # an optimization component for finding paths for the personas' movement. 
     # self.address_tiles['<spawn_loc>bedroom-2-a'] == {(58, 9)}
     # self.address_tiles['double studio:recreation:pool table'] 
-    #   == {(29, 14), (31, 11), (30, 14), (32, 11), ...}, 
+    #   == {(29, 14), (31, 11), (30, 14), (32, 11), ..q.}, 
     self.address_tiles = dict()
     for i in range(self.maze_height):
       for j in range(self.maze_width): 
